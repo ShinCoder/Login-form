@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta name="charset" content="UTF-8">
+    <meta name="keywords" content="login, form, html, css">
+    <meta name="description" content="Login form with html css">
+    <meta name="author" content="ShinCoder">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login form with html and css</title>
+    <link rel="stylesheet" href="login_form_stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-cell">
+            <h1>Login</h1>
+        </div>
+        <div class="form-cell" id="username-cell">
+            <i class="fa-regular fa-user"></i>
+            <input type="text" name="username" id="username" placeholder=" ">
+            <div class="form-placeholder">Username</div>
+        </div>
+        <div class="form-cell" id="password-cell">
+            <i class="fa-solid fa-lock"></i>
+            <input type="password" name="password" id="password-hide" placeholder=" " onfocusout="mimicPassword('hide')">
+            <input type="text" name="password" id="password-show" placeholder=" " onfocusout="mimicPassword('show')">
+            <div class="form-placeholder">Password</div>
+        </div>
+        <div class="form-cell" id="checkbox-cell">
+            <div class="checkbox">
+                <input type="checkbox" id="remember">
+                <label for="remember">Remember my password</label>
+            </div>
+            <div class="checkbox">
+                <label for="show-password">Show password</label>
+                <input type="checkbox" id="show-password" onclick="togglePassword()">
+            </div>
+        </div>
+        <div class="form-cell" id="or-cell">
+            <div>or</div>
+        </div>
+        <div class="form-cell" id="icon-cell">
+            <div>Log in with</div>
+            <a href="#facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#google">
+                <i class="fa-brands fa-google"></i>
+            </a>
+            <a href="#twitter">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#github">
+                <i class="fa-brands fa-github"></i>
+            </a>
+        </div>
+        <div class="form-cell" id="signup-cell">
+            Don't have an account ? 
+            <a href="#signup"> Sign up </a>
+            here
+        </div>
+    </div>
+    <script src="login_form_script.js"></script>
+</body>
+
+</html>

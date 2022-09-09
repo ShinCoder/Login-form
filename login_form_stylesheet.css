@@ -1,0 +1,168 @@
+:root {
+    --form_background: rgb(0, 0, 0);
+    --form_main_color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+    background-color: var(--form_background);
+    border: 2px solid var(--form_main_color);
+    border-radius: 10px;
+    width: 40%;
+    padding: 10px 20px;
+}
+
+.form-cell h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: var(--form_main_color);
+}
+
+.form-cell {
+    width: 100%;
+    border-radius: 5px; 
+    margin: 20px 0px;
+    box-sizing: border-box;
+} 
+
+.form-cell:is(#username-cell, #password-cell) {
+    color: var(--form_main_color);
+    position: relative;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 1fr 9fr;
+    grid-template-rows: 46px;
+    font-size: 1em;
+    border: 2px solid var(--form_main_color);
+}
+
+.form-cell:is(#username-cell, #password-cell)  i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-cell:is(#username-cell, #password-cell)  input {
+    border: none; 
+    background-color: inherit;
+    color: inherit;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    font-size: inherit;
+} 
+
+.form-cell:is(#username-cell, #password-cell)  input:focus {
+    outline: none;
+}
+
+.form-cell:is(#username-cell, #password-cell)  .form-placeholder {
+    font-size: inherit;
+    color: inherit;
+    opacity: 0.5;
+    position: absolute;
+    top: 50%;
+    left: calc(10% + 5px);
+    transform: translateY(-50%);
+    user-select: none;
+    pointer-events: none;
+    padding: 3px 5px;
+    transition: 0.1s ease;
+}
+
+.form-cell:is(#username-cell, #password-cell) input:not(:placeholder-shown) ~ .form-placeholder,
+.form-cell:is(#username-cell, #password-cell)  input:focus ~ .form-placeholder{
+    top: -2px;
+    opacity: 1;
+    background-color: var(--form_background);
+}
+
+#password-show {
+    display: none;
+}
+
+.checkbox {
+    color: var(--form_main_color);
+    font-size: 0.7em;
+    display: flex;
+}
+
+.checkbox label {
+    color: inherit;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    margin: 0 5px;
+}
+
+#checkbox-cell {
+    display: flex;
+    justify-content: space-between;
+}
+
+#or-cell {
+    border: 1px solid var(--form_main_color);
+    opacity: 0.8;
+    position: relative;
+    background-color: var(--form_main_color);
+    width: 80%;
+    margin: 20px auto;
+}
+
+#or-cell div {
+    position: absolute;
+    color: var(--form_main_color);
+    top: -2px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--form_background);
+    padding: 0px 10px;
+    font-size: 1em;
+}
+
+#icon-cell {
+    color: var(--form_main_color);
+    font-size: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#icon-cell div, #icon-cell a{
+    padding: 5px 5px;
+}
+
+#icon-cell i {
+    color: var(--form_main_color);
+    font-size: 1.5em;
+}
+
+#signup-cell {
+    color: var(--form_main_color);
+    font-size: 0.7em;
+    display: flex;
+    justify-content: center;
+}
+
+#signup-cell a {
+    color: inherit;
+    padding: 0 3px;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    .form-container {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width:46.1875em) {
+    .form-container {
+        width: 100%;
+    }
+}
