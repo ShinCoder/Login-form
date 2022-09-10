@@ -106,6 +106,24 @@ body {
     justify-content: space-between;
 }
 
+#submit-cell {
+    height: 40px;
+    border: 2px solid var(--form_main_color);
+    background-color: var(--form_main_color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.25em;
+    cursor: pointer;
+    opacity: 0.8;
+    width: 80%;
+    margin: 0 auto;
+}
+
+#submit-cell:hover {
+    opacity: 1;
+}
+
 #or-cell {
     border: 1px solid var(--form_main_color);
     opacity: 0.8;
