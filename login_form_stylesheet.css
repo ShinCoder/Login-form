@@ -30,6 +30,7 @@ body {
     border-radius: 5px; 
     margin: 20px 0px;
     box-sizing: border-box;
+    user-select: none;
 } 
 
 .form-cell:is(#username-cell, #password-cell) {
