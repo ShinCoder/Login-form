@@ -21,7 +21,7 @@ body {
 
 .form-cell h1 {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2.5rem;
     color: var(--form_main_color);
 }
 
@@ -40,7 +40,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 9fr;
     grid-template-rows: 46px;
-    font-size: 1em;
+    font-size: 1rem;
     border: 2px solid var(--form_main_color);
 }
 
@@ -81,6 +81,7 @@ body {
 .form-cell:is(#username-cell, #password-cell)  input:focus ~ .form-placeholder{
     top: -2px;
     opacity: 1;
+    font-size: 0.9rem;
     background-color: var(--form_background);
 }
 
@@ -90,7 +91,7 @@ body {
 
 .checkbox {
     color: var(--form_main_color);
-    font-size: 0.7em;
+    font-size: 0.7rem;
     display: flex;
 }
 
@@ -114,7 +115,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.25em;
+    font-size: 1.25rem;
     cursor: pointer;
     opacity: 0.8;
     width: 80%;
@@ -147,7 +148,7 @@ body {
 
 #icon-cell {
     color: var(--form_main_color);
-    font-size: 1em;
+    font-size: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -159,12 +160,12 @@ body {
 
 #icon-cell i {
     color: var(--form_main_color);
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 #signup-cell {
     color: var(--form_main_color);
-    font-size: 0.7em;
+    font-size: 0.7rem;
     display: flex;
     justify-content: center;
 }
